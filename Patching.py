@@ -77,19 +77,18 @@ file_csv = pd.read_csv('esc50-dataset/esc50.csv')
 names = file_csv['filename']
 categories = file_csv['category']
 
-labels = unique(categories)w
+labels = unique(categories)
 # variable to store the labels
 label = -1
-for ind in range(2000):
-  word = categories[ind]
-  label = np.vstack((label,labels.index(word))).astype(int)
-
-label = np.delete(label,0) 
-
 for ind in range(2000):
   data = np.load('Preprocessed/'+names[ind]+'.npz')
   spec=data['fbanks']
   patches = patching(spec)
   # save data individually in folder Patches
   np.savez('Patches/' +names[ind]+ '.npz',patches=patches)
-  np.savez('Patches/Labels.npz',label=label)
+  
+  word = categories[ind]
+  label = np.vstack((label,labels.index(word))).astype(int)
+  
+label = np.delete(label,0) # remove initialization
+np.savez('Patches/Labels.npz',label=label)
