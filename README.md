@@ -21,4 +21,4 @@ import numpy
 import pandas 
 
 # Documentation
-The codes included in this repository where created following the guidelines in the papers included in this folder
+The codes included in this repository where created following the guidelines of the papers included in this folder.
