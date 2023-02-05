@@ -77,7 +77,7 @@ file_csv = pd.read_csv('esc50-dataset/esc50.csv')
 names = file_csv['filename']
 categories = file_csv['category']
 
-labels = unique(categories)
+labels = unique(categories)w
 # variable to store the labels
 label = -1
 for ind in range(2000):
@@ -92,3 +92,4 @@ for ind in range(2000):
   patches = patching(spec)
   # save data individually in folder Patches
   np.savez('Patches/' +names[ind]+ '.npz',patches=patches)
+  np.savez('Patches/Labels.npz',label=label)
