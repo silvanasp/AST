@@ -3,7 +3,7 @@ Python code for classification of environmental sounds.
 
 
 # Data
-Environmental sound files are contained in the folder audio in .wav format.
+Environmental sound files are contained in the folder audio in .wav format. Information about the files are in esc50.csv.
 
 # Preprocessing
 The preprocessing.py file contains the code for filtering the signals anb computing the spectra using the Mel filter bank. The results are saved in the filder Preprocessed. 
