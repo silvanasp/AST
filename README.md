@@ -1,12 +1,18 @@
 # AST
-Python code for classification of environmental sounds. Requiremets: 
-import 
+Python code for classification of environmental sounds. 
+
 
 # Data
 Environmental sound files are contained in the folder audio in .wav format.
 
 # Preprocessing
 The preprocessing.py file contains the code for filtering the signals anb computing the spectra using the Mel filter bank.
+Requiremets: 
+import os  
+import pandas as pd
+import numpy as np
+import scipy.io.wavfile
+import scipy.signal as sps 
 
 # Patching and labeling 
 The Patching.py file contains the code for computing 16X16 patches from the original images (spectra) and its corresponding vectorization. 
